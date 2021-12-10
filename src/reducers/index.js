@@ -6,7 +6,7 @@ export const initialState = {
     error: ''
 }
 
-const reducer = (state = initialState, action)=>{
+const reducer = (state = initialState, action) => {
     switch (action.type) {
         case START_FETCH:
             return {
@@ -29,7 +29,7 @@ const reducer = (state = initialState, action)=>{
             const newSmurf = action.payload;
             return {
                 ...state,
-                smurfs: [...state.smurfs, newSmurf]
+                smurfs: [ ...state.smurfs, newSmurf ]
             }
         case ADD_SMURF_ERROR:
             return {
