@@ -112,9 +112,14 @@ In this project, you will build the reducer, actions and basic redux connects to
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers below.
 
 1. What problem does the context API help solve?
+  - It allows us to share values among children components without having to explicitly pass props down through each level (prop drilling).
 
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+  - Actions are like responses to events in the UI. They dispatch an action object with applicable information to the reducer to update state with said information. Reducers bring together stateful logic and execute changes based on the action type and information received from an action object. The store is a single overhead place where application state is held, and it can be accessed by components that need the information stored there. 
+  - The store is known as the single source of truth because it is held separate from and unnafected by any component and is the only instance of where application state is held. 
 
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
+  - Redux-thunk allows us to intercept actions before they're passed to the reducers. We can then perform functions, or not, or stop the action altogether, then (if it's not stopped) forward the result to the reducers. Our action creators usually change in complexity because we can add code for additional functions. 
 
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
+  - I think my favorite state management system is Redux because, although there is a lot of overhead and complexity to use it, it feels reliable and simple to understand. I like that I only need to add code to a component if that component needs access to the application state, and I can pick and choose what slices I need. Context API is also simple and helps avoid prop drilling, but I take comfort in the fact that Redux is more scalable and easier to keep track of when an application becomes large. 
